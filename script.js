@@ -38,11 +38,24 @@ const exercises = [
  {
     name: "Poprawa techniki line'a i boasta",
     description: "Osoby A i B - stojące po bokach - grają drive do siebie, a potem boast, osoba C - stojąca na środku - odgrywa driveami",
-    skills: ["refleks"],
+    skills: ["technika"],
     shots: ["drive", "boast"],
     players: ["3"]
+  },
+   {
+    name: "Drop czy boast",
+    description: "Osoba z tyłu gra najpierw drive do siebie, a następnie drop albo boast. Osoba na środku musi rozpoznać zagranie i odebrać oraz odegrać - crossem albo drivem.",
+    skills: ["uważność"],
+    shots: ["drive", "boast", "drop", "cross"],
+    players: ["2"]
+  },
+    {
+    name: "Drop do siebie i na tył",
+    description: "Osoba z tyłu gra drive, osoba z przodu dropa do siebie, a następnie drive'a do tyłu. Ćwiczenie wymaga szybkiego przejścia z krótkiego zamachu dropowego, do pełnego drive'owego",
+    skills: ["refleks", "wracanie"],
+    shots: ["drive", "drop"],
+    players: ["1", "2"]
   }
-  
 ];
 
 document.getElementById("searchInput").addEventListener("input", function() {
