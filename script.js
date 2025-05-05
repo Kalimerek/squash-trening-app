@@ -38,7 +38,7 @@ const exercises = [
  {
     name: "Poprawa techniki line'a i boasta",
     description: "Osoby A i B - stojące po bokach - grają drive do siebie, a potem boast, osoba C - stojąca na środku - odgrywa driveami",
-    skills: ["refleks"]
+    skills: ["refleks"],
     shots: ["drive", "boast"],
     players: ["3"]
   }
