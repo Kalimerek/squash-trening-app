@@ -8,7 +8,7 @@ const exercises = [
     players: ["1", "2"]
   },
   {
-    name: "Boasty I drive",
+    name: "Boasty i drive",
     description: "Dwie osoby stojące po bokach grają boasta, osoba na środku odgrywa piłkę drivem",
     skills: ["uważność"],
     shots: ["boast", "drive"],
@@ -35,6 +35,14 @@ const exercises = [
     shots: ["wolej"],
     players: ["2"]
   }
+ {
+    name: "Poprawa techniki line'a i boasta",
+    description: "Osoby A i B - stojące po bokach - grają drive do siebie, a potem boast, osoba C - stojąca na środku - odgrywa driveami",
+    skills:
+    shots: ["drive", "boast"],
+    players: ["3"]
+  }
+  
 ];
 
 document.getElementById("searchInput").addEventListener("input", function() {
