@@ -14,35 +14,27 @@
   </div>
   <script src="script.js"></script>
 
-  <!-- Przycisk do otwarcia modalu -->
-<button id="openModalBtn">Dodaj ćwiczenie</button>
+  <!-- Przycisk do otwierania modala -->
+    <button id="openModalBtn">Dodaj ćwiczenie</button>
 
-<!-- Modal -->
-<div id="exerciseModal" class="modal">
-  <div class="modal-content">
-    <span id="closeModalBtn" class="close-btn">&times;</span>
-    
-    <h2>Dodaj ćwiczenie</h2>
-    <form id="exerciseForm">
-      <label for="name">Nazwa ćwiczenia:</label>
-      <input type="text" id="name" name="name" required><br><br>
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeModalBtn" class="close">&times;</span>
+            <h2>Formularz dodania ćwiczenia</h2>
+            <form id="exerciseForm">
+                <label for="name">Nazwa ćwiczenia</label>
+                <input type="text" id="name" name="name" required>
 
-      <label for="description">Opis ćwiczenia:</label>
-      <input type="text" id="description" name="description" required><br><br>
+                <label for="description">Opis</label>
+                <textarea id="description" name="description" required></textarea>
 
-      <label for="skills">Umiejętności:</label>
-      <input type="text" id="skills" name="skills" required><br><br>
+                <button type="submit">Dodaj ćwiczenie</button>
+            </form>
+        </div>
+    </div>
 
-      <label for="shots">Zagrania:</label>
-      <input type="text" id="shots" name="shots" required><br><br>
-
-      <label for="participants">Liczba osób:</label>
-      <input type="number" id="participants" name="participants" required><br><br>
-
-      <button type="submit">Dodaj ćwiczenie</button>
-    </form>
-  </div>
-</div>
+    <script src="script.js"></script>
 
 
 
