@@ -62,7 +62,7 @@ const exercises = [
     skills: ["wracanie", "gra"],
     shots: ["drive", "drop", "boast", "cross"],
     players: ["2", "3", "4"]
-  },
+  }
 ];
 
 document.getElementById("searchInput").addEventListener("input", function() {
