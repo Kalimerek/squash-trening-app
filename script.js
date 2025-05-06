@@ -95,42 +95,21 @@ document.getElementById("searchInput").addEventListener("input", function() {
   });
 
 
-// Otwórz modal po kliknięciu w przycisk
+// Otwórz modal po kliknięciu w przycisk "Dodaj ćwiczenie"
 document.getElementById("openModalBtn").addEventListener("click", function() {
-    document.getElementById("modal").style.display = "block";
+    document.getElementById("modal").style.display = "block"; // Pokazuje modal
 });
 
-// Zamknij modal
+// Zamknij modal po kliknięciu w przycisk "X"
 document.getElementById("closeModalBtn").addEventListener("click", function() {
-    document.getElementById("modal").style.display = "none";
+    document.getElementById("modal").style.display = "none"; // Ukrywa modal
 });
 
-// Obsługa formularza
-document.getElementById("exerciseForm").addEventListener("submit", function(e) {
-    e.preventDefault(); // Zablokowanie domyślnej akcji formularza
-
-    const exerciseData = {
-        name: document.getElementById("exerciseName").value,
-        description: document.getElementById("exerciseDescription").value,
-        skills: document.getElementById("skills").value.split(","),
-        plays: document.getElementById("plays").value.split(","),
-        participants: parseInt(document.getElementById("participants").value)
-    };
-
-    // Przykładowe dane do wysyłki - możesz połączyć z API backendu
-    fetch('https://squash-trening-app.onrender.com/exercises', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(exerciseData)
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert("Ćwiczenie zostało dodane!");
-        document.getElementById("modal").style.display = "none"; // Zamknij modal po dodaniu
-    })
-    .catch(error => console.error('Error:', error));
+// Opcjonalnie, zamknięcie modala, gdy klikniesz poza jego obszar
+window.addEventListener("click", function(event) {
+    if (event.target === document.getElementById("modal")) {
+        document.getElementById("modal").style.display = "none";
+    }
 });
 
 
