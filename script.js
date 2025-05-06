@@ -58,7 +58,7 @@ const exercises = [
   },
     {
     name: "eLka",
-    description: "Jedna ćwiartka kortu zostaje wyłączona z gry, na pozostałych 3 grają dwie osoby rozpoczynająć serwisem. Wpadnięcie piłki w ćwiartkę niegrającą (serwisowa jest niegrająca) jest traktowane jak aut. Zawodnik, który traci punkt, schodzi, a w jego miejsce wchodzi jedna z osób oczekujących",
+    description: "Jedna ćwiartka kortu zostaje wyłączona z gry, na pozostałych 3 grają dwie osoby rozpoczynając serwisem. Wpadnięcie piłki w ćwiartkę niegrającą (serwisowa jest niegrająca) jest traktowane jak aut. Zawodnik, który traci punkt, schodzi, a w jego miejsce wchodzi jedna z osób oczekujących"],
     skills: ["wracanie", "gra"],
     shots: ["drive", "drop", "boast", "cross"],
     players: ["2", "3", "4"]
