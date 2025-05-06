@@ -97,15 +97,15 @@ document.getElementById("searchInput").addEventListener("input", function() {
 
 // Otwórz modal po kliknięciu w przycisk "Dodaj ćwiczenie"
 document.getElementById("openModalBtn").addEventListener("click", function() {
-    document.getElementById("modal").style.display = "block"; // Pokazuje modal
+    document.getElementById("modal").style.display = "block";
 });
 
 // Zamknij modal po kliknięciu w przycisk "X"
 document.getElementById("closeModalBtn").addEventListener("click", function() {
-    document.getElementById("modal").style.display = "none"; // Ukrywa modal
+    document.getElementById("modal").style.display = "none";
 });
 
-// Opcjonalnie, zamknięcie modala, gdy klikniesz poza jego obszar
+// Zamknięcie modala, jeśli klikniesz poza nim
 window.addEventListener("click", function(event) {
     if (event.target === document.getElementById("modal")) {
         document.getElementById("modal").style.display = "none";
