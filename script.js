@@ -93,4 +93,62 @@ document.getElementById("searchInput").addEventListener("input", function() {
                      <p><strong>Liczba osób:</strong> ${ex.players.join(", ")}</p>`;
     resultsDiv.appendChild(div);
   });
+
+// Uzyskujemy dostęp do elementów
+const openModalBtn = document.getElementById('openModalBtn');
+const closeModalBtn = document.getElementById('closeModalBtn');
+const modal = document.getElementById('exerciseModal');
+const form = document.getElementById('exerciseForm');
+
+// Otwieranie modalu po kliknięciu w przycisk
+openModalBtn.addEventListener('click', () => {
+  modal.style.display = 'block'; // Pokazuje modal
+});
+
+// Zamknięcie modalu po kliknięciu w krzyżyk
+closeModalBtn.addEventListener('click', () => {
+  modal.style.display = 'none'; // Ukrywa modal
+});
+
+// Zamknięcie modalu klikając poza jego obszar
+window.addEventListener('click', (event) => {
+  if (event.target === modal) {
+    modal.style.display = 'none'; // Ukrywa modal
+  }
+});
+
+// Wysyłanie danych formularza na backend
+form.addEventListener('submit', function(event) {
+  event.preventDefault();  // Zapobiega przeładowaniu strony
+
+  const exercise = {
+    name: document.getElementById('name').value,
+    description: document.getElementById('description').value,
+    skills: document.getElementById('skills').value.split(','),  // Umiejętności oddzielone przecinkiem
+    shots: document.getElementById('shots').value.split(','),  // Podobnie dla zagrań
+    participants: document.getElementById('participants').value
+  };
+
+  // Wysyłamy dane do API
+  fetch('https://squash-trening-app.onrender.com/api/exercises', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(exercise)
+  })
+  .then(response => response.json())
+  .then(data => {
+    console.log('Success:', data);
+    alert('Ćwiczenie dodane pomyślnie!');
+    modal.style.display = 'none'; // Zamknij modal po dodaniu ćwiczenia
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    alert('Błąd podczas dodawania ćwiczenia.');
+  });
+});
+
+
+  
 });
