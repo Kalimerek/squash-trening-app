@@ -67,3 +67,31 @@ const exercises = [
 ];
 
 document.getElementById("searchInput").addEventListener("input", function() {
+  const query = this.value.toLowerCase().split(",").map(q => q.trim());
+   const resultsDiv = document.getElementById("results");
+   resultsDiv.innerHTML = "";
+ 
+   const filtered = exercises.filter(ex => {
+     return query.some(q =>
+       ex.skills.some(s => s.toLowerCase().includes(q)) ||
+       ex.shots.some(s => s.toLowerCase().includes(q)) ||
+       ex.players.includes(q)
+     );
+   });
+ 
+   if (filtered.length === 0 && query[0] !== "") {
+     resultsDiv.innerHTML = "<p>Brak ćwiczeń spełniających kryteria.</p>";
+     return;
+   }
+ 
+   filtered.forEach(ex => {
+     const div = document.createElement("div");
+     div.className = "result";
+     div.innerHTML = `<h2>${ex.name}</h2>
+                      <p><strong>Opis:</strong> ${ex.description}</p>
+                      <p><strong>Umiejętności:</strong> ${ex.skills.join(", ")}</p>
+                      <p><strong>Zagrania:</strong> ${ex.shots.join(", ")}</p>
+                      <p><strong>Liczba osób:</strong> ${ex.players.join(", ")}</p>`;
+     resultsDiv.appendChild(div);
+   });
+ });
