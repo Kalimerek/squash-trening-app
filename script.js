@@ -62,7 +62,7 @@ const exercises = [
     skills: ["wracanie", "gra"],
     shots: ["drive", "drop", "boast", "cross"],
     players: ["2", "3", "4"]
-  }
+  },
 ];
 
 document.getElementById("searchInput").addEventListener("input", function() {
@@ -94,60 +94,45 @@ document.getElementById("searchInput").addEventListener("input", function() {
     resultsDiv.appendChild(div);
   });
 
-// Uzyskujemy dostęp do elementów
-const openModalBtn = document.getElementById('openModalBtn');
-const closeModalBtn = document.getElementById('closeModalBtn');
-const modal = document.getElementById('exerciseModal');
-const form = document.getElementById('exerciseForm');
 
-// Otwieranie modalu po kliknięciu w przycisk
-openModalBtn.addEventListener('click', () => {
-  modal.style.display = 'block'; // Pokazuje modal
+// Otwórz modal po kliknięciu w przycisk
+document.getElementById("openModalBtn").addEventListener("click", function() {
+    document.getElementById("modal").style.display = "block";
 });
 
-// Zamknięcie modalu po kliknięciu w krzyżyk
-closeModalBtn.addEventListener('click', () => {
-  modal.style.display = 'none'; // Ukrywa modal
+// Zamknij modal
+document.getElementById("closeModalBtn").addEventListener("click", function() {
+    document.getElementById("modal").style.display = "none";
 });
 
-// Zamknięcie modalu klikając poza jego obszar
-window.addEventListener('click', (event) => {
-  if (event.target === modal) {
-    modal.style.display = 'none'; // Ukrywa modal
-  }
+// Obsługa formularza
+document.getElementById("exerciseForm").addEventListener("submit", function(e) {
+    e.preventDefault(); // Zablokowanie domyślnej akcji formularza
+
+    const exerciseData = {
+        name: document.getElementById("exerciseName").value,
+        description: document.getElementById("exerciseDescription").value,
+        skills: document.getElementById("skills").value.split(","),
+        plays: document.getElementById("plays").value.split(","),
+        participants: parseInt(document.getElementById("participants").value)
+    };
+
+    // Przykładowe dane do wysyłki - możesz połączyć z API backendu
+    fetch('https://squash-trening-app.onrender.com/exercises', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(exerciseData)
+    })
+    .then(response => response.json())
+    .then(data => {
+        alert("Ćwiczenie zostało dodane!");
+        document.getElementById("modal").style.display = "none"; // Zamknij modal po dodaniu
+    })
+    .catch(error => console.error('Error:', error));
 });
 
-// Wysyłanie danych formularza na backend
-form.addEventListener('submit', function(event) {
-  event.preventDefault();  // Zapobiega przeładowaniu strony
-
-  const exercise = {
-    name: document.getElementById('name').value,
-    description: document.getElementById('description').value,
-    skills: document.getElementById('skills').value.split(','),  // Umiejętności oddzielone przecinkiem
-    shots: document.getElementById('shots').value.split(','),  // Podobnie dla zagrań
-    participants: document.getElementById('participants').value
-  };
-
-  // Wysyłamy dane do API
-  fetch('https://squash-trening-app.onrender.com/api/exercises', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(exercise)
-  })
-  .then(response => response.json())
-  .then(data => {
-    console.log('Success:', data);
-    alert('Ćwiczenie dodane pomyślnie!');
-    modal.style.display = 'none'; // Zamknij modal po dodaniu ćwiczenia
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-    alert('Błąd podczas dodawania ćwiczenia.');
-  });
-});
 
 
   
