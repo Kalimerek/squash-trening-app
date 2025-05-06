@@ -83,15 +83,5 @@ document.getElementById("searchInput").addEventListener("input", function() {
      resultsDiv.innerHTML = "<p>Brak ćwiczeń spełniających kryteria.</p>";
      return;
    }
- 
-   filtered.forEach(ex => {
-     const div = document.createElement("div");
-     div.className = "result";
-     div.innerHTML = `<h2>${ex.name}</h2>
-                      <p><strong>Opis:</strong> ${ex.description}</p>
-                      <p><strong>Umiejętności:</strong> ${ex.skills.join(", ")}</p>
-                      <p><strong>Zagrania:</strong> ${ex.shots.join(", ")}</p>
-                      <p><strong>Liczba osób:</strong> ${ex.players.join(", ")}</p>`;
-     resultsDiv.appendChild(div);
    });
  });
