@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Presja na line i atak",
       description:
         "Wymiana na BH lub FH, jeśli piłka spadnie przed linię środkową, można zagrać atakującego crossa.",
-      skills: ["atak"],
+      skills: ["atak", "uważność"],
       shots: ["cross", "drive"],
       players: ["1", "2"],
     },
