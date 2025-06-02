@@ -1,5 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
   const exercises = [
+     {
+      name: "Drive do siebie i boast",
+      description:
+        "A cross do tyłu, B drive do siebie, potem boast",
+      skills: ["poruszanie"],
+      shots: ["boast", "cross", "drive"],
+      players: ["1", "2"],
+    },
+  {
+      name: "Czy drop, czy boast?",
+      description:
+        "A gra z tyłu drop albo boast, B ze środka drive do tyłu.",
+      skills: ["uważność", "poruszanie"],
+      shots: ["boast", "drop", "drive"],
+      players: ["1", "2"],
+    },
+    
   {
       name: "Walka na dropy",
       description:
