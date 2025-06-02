@@ -35,6 +35,7 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["uważność"],
       shots: ["boast", "drive"],
       players: ["3"],
+      komentarz: 
     },
     {
       name: "Odbierzesz loba czy drive’a?",
@@ -43,6 +44,7 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["wracanie"],
       shots: ["boast", "lob", "drop", "cross"],
       players: ["1", "2"],
+      komentarz: 
     },
     {
       name: "Presja na line i atak",
@@ -51,6 +53,7 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["atak"],
       shots: ["cross", "drive"],
       players: ["1", "2"],
+      komentarz: 
     },
     {
       name: "Panowanie nad piłką z woleja",
@@ -59,6 +62,7 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["refleks"],
       shots: ["wolej"],
       players: ["2"],
+      komentarz: 
     },
   ];
 
