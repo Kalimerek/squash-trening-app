@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+arzdocument.addEventListener("DOMContentLoaded", function () {
   const exercises = [
   {
       name: "Zgadnij czy drop, czy boast",
@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <p><strong>Umiejętności:</strong> ${ex.skills.join(", ")}</p>
         <p><strong>Zagrania:</strong> ${ex.shots.join(", ")}</p>
         <p><strong>Liczba osób:</strong> ${ex.players.join(", ")}</p>
-        <p><strong>Komentarz:</strong> ${ex.shots.join(", ")}</p>`;
+        <p><strong>Komentarz:</strong> ${ex.komentarz.join(", ")}</p>`;
       resultsDiv.appendChild(div);
     });
   });
