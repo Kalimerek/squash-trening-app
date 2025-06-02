@@ -1,5 +1,13 @@
 document.addEventListener("DOMContentLoaded", function () {
   const exercises = [
+  {
+      name: "Walka na dropy",
+      description:
+        "A serwuje, B odgrywa boast, A drop, B drop… Aż do zdobycia punktu. Gra na punkty.",
+      skills: ["refleks"],
+      shots: ["boast", "drop"],
+      players: ["1", "2"],
+    },    
     {
       name: "Boast i do środka",
       description:
