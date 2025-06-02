@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       skills: ["refleks"],
       shots: ["boast", "drop"],
       players: ["1", "2"],
+      komentarz: ["1", "2"],
     },    
     {
       name: "Boast i do środka",
@@ -78,7 +79,8 @@ document.addEventListener("DOMContentLoaded", function () {
         <p><strong>Opis:</strong> ${ex.description}</p>
         <p><strong>Umiejętności:</strong> ${ex.skills.join(", ")}</p>
         <p><strong>Zagrania:</strong> ${ex.shots.join(", ")}</p>
-        <p><strong>Liczba osób:</strong> ${ex.players.join(", ")}</p>`;
+        <p><strong>Liczba osób:</strong> ${ex.players.join(", ")}</p>
+        <p><strong>Komentarz:</strong> ${ex.shots.join(", ")}</p>`;
       resultsDiv.appendChild(div);
     });
   });
