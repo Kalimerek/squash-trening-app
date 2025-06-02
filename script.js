@@ -7,6 +7,7 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["uważność", "poruszanie"],
       shots: ["boast", "drop", "drive"],
       players: ["1", "2"],
+      komentarz: 
     },   
   {
       name: "Walka na dropy",
@@ -25,6 +26,7 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["uważność", "wracanie"],
       shots: ["boast", "drive", "cross"],
       players: ["1", "2"],
+      komentarz: 
     },
     {
       name: "Boasty I drive",
