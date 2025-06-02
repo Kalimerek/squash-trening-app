@@ -1,25 +1,14 @@
-arzdocument.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const exercises = [
-  {
-      name: "Zgadnij czy drop, czy boast",
-      description:
-        "Ćwiczenie 2: A gra z tyłu drop albo boast, B ze środka drive do tyłu.",
-      skills: ["uważność", "poruszanie"],
-      shots: ["boast", "drop", "drive"],
-      players: ["1", "2"],
-      komentarz: 
-        "",
-    },   
   {
       name: "Walka na dropy",
       description:
         "A serwuje, B odgrywa boast, A drop, B drop… Aż do zdobycia punktu. Gra na punkty.",
-      skills: ["refleks", "poruszanie"],
+      skills: ["refleks"],
       shots: ["boast", "drop"],
       players: ["1", "2"],
-      komentarz:
-        "Tematy treningu: poruszanie po korcie, odległość od piłki",
-    },    
+    },
+
     {
       name: "Boast i do środka",
       description:
@@ -27,8 +16,6 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["uważność", "wracanie"],
       shots: ["boast", "drive", "cross"],
       players: ["1", "2"],
-      komentarz: 
-        "",
     },
     {
       name: "Boasty I drive",
@@ -37,18 +24,14 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["uważność"],
       shots: ["boast", "drive"],
       players: ["3"],
-      komentarz: 
-        "",
     },
     {
       name: "Odbierzesz loba czy drive’a?",
       description:
         "Osoba A zaczyna boastem -> osoba B drop do siebie, a następnie cross-lob / drive do tyłu -> osoba A odbiera drivem do siebie, a następnie odgrywa boastem / drivem do siebie i odgrywa dropem do przodu.",
-      skills: ["wracanie"],
+      skills: ["wracanie do środka kortu"],
       shots: ["boast", "lob", "drop", "cross"],
       players: ["1", "2"],
-      komentarz: 
-        "",
     },
     {
       name: "Presja na line i atak",
@@ -57,8 +40,6 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["atak"],
       shots: ["cross", "drive"],
       players: ["1", "2"],
-      komentarz: 
-        "",
     },
     {
       name: "Panowanie nad piłką z woleja",
@@ -67,8 +48,6 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
       skills: ["refleks"],
       shots: ["wolej"],
       players: ["2"],
-      komentarz: 
-        "",
     },
   ];
 
@@ -100,9 +79,9 @@ arzdocument.addEventListener("DOMContentLoaded", function () {
         <p><strong>Opis:</strong> ${ex.description}</p>
         <p><strong>Umiejętności:</strong> ${ex.skills.join(", ")}</p>
         <p><strong>Zagrania:</strong> ${ex.shots.join(", ")}</p>
-        <p><strong>Liczba osób:</strong> ${ex.players.join(", ")}</p>
-        <p><strong>Komentarz:</strong> ${ex.komentarz.join(", ")}</p>`;
+        <p><strong>Liczba osób:</strong> ${ex.players.join(", ")}</p>`;
       resultsDiv.appendChild(div);
     });
   });
 });
+
