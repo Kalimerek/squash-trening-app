@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       skills: ["refleks"],
       shots: ["boast", "drop"],
       players: ["1", "2"],
-      komentarz: ["1", "2"],
+      komentarz: ["Tematy treningu: poruszanie po korcie, odległość od piłki"],
     },    
     {
       name: "Boast i do środka",
