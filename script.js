@@ -1,10 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   const exercises = [
   {
+      name: "Zgadnij czy drop, czy boast",
+      description:
+        "Ćwiczenie 2: A gra z tyłu drop albo boast, B ze środka drive do tyłu.",
+      skills: ["uważność", "poruszanie"],
+      shots: ["boast", "drop", "drive"],
+      players: ["1", "2"],
+    },   
+  {
       name: "Walka na dropy",
       description:
         "A serwuje, B odgrywa boast, A drop, B drop… Aż do zdobycia punktu. Gra na punkty.",
-      skills: ["refleks"],
+      skills: ["refleks", "poruszanie"],
       shots: ["boast", "drop"],
       players: ["1", "2"],
       komentarz: 
@@ -30,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "Odbierzesz loba czy drive’a?",
       description:
         "Osoba A zaczyna boastem -> osoba B drop do siebie, a następnie cross-lob / drive do tyłu -> osoba A odbiera drivem do siebie, a następnie odgrywa boastem / drivem do siebie i odgrywa dropem do przodu.",
-      skills: ["wracanie do środka kortu"],
+      skills: ["wracanie"],
       shots: ["boast", "lob", "drop", "cross"],
       players: ["1", "2"],
     },
